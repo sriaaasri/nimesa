@@ -82,7 +82,9 @@ public class Weather {
     }
 
     void validateMenuInput(int n) {
-        if (n < 1 && n > 4)
+        System.out.println("selected "+n);
+        
+        if (1 > n || 4 < n)
             System.out.println("Invalid Choice! Choose an option from 1 to 4");
         else if (n == 0) {
             System.out.println("Exit: Bye!");
@@ -90,6 +92,8 @@ public class Weather {
             userChosenOption = n;
             promptDate();
         }
+
+        
     }
 
     void callWeatherAPI() {
